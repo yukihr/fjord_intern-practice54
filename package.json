@@ -1,0 +1,13 @@
+{
+  "name": "256intern_practice-54",
+  "version": "0.0.0",
+  "description": "== README",
+  "main": "Gruntfile.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-sass": "~0.7.0"
+  }
+}
