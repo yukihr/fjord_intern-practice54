@@ -4,6 +4,8 @@ module.exports = (grunt) ->
     pkg: pkg
     sass:
       dist:
+        options:
+          compass: true
         files:
           'style.css': 'style.sass'
     # for livereload
