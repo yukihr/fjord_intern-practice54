@@ -228,7 +228,20 @@ header#header
     +circle(220px)
     background:
       color: $color-bg
-        
+  nav#global
+    margin: 0
+    padding: 0
+    min-width: 768px
+    position: absolute
+    top: -45px
+    ul
+      li
+        a
+          &:hover
+            color: #6779D1
+          &:active
+            color: #5361A8
+
 #about
   ol
     +rounded-section
@@ -260,6 +273,18 @@ header#header
             color: $color-text-light
             font:
               size: 12px
+  #sub
+    #local
+      ul
+        li
+          font:
+            size: 24px
+          margin:
+            bottom: 14px
+          border:
+            left: solid 5px $color-theme
+          padding:
+            left: 5px
 
 #footer
   +border-top-radius($section-round-radius)
