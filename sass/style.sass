@@ -7,6 +7,7 @@
 
 /* Variables
 $color-theme: #F85A55
+$color-border: #F76C6A
 $color-text: #292929
 $color-text-light: #888888
 $color-bg: #F3F2F2
@@ -160,7 +161,10 @@ div#about
     +make-row
     li
       +make-md-column(4)
+      padding:
+        bottom: 20px
       h2
+        text-align: center
         font-size: 20px
  
 #body
@@ -187,7 +191,7 @@ div#about
               left: 10px
         footer
           border:
-            bottom: solid 3px #F76C6A
+            bottom: solid 3px $color-border
           padding:
             bottom: 10px
           +author-dl
@@ -240,6 +244,12 @@ header#header
     +rounded-section
     background:
       color: $color-bg
+    li
+      @media (min-width: $screen-md)
+        border:
+          left: solid 2px $color-theme
+      &:first-child
+        border: none
         
 #body
   +rounded-section
