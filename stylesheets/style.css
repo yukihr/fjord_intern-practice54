@@ -5009,7 +5009,7 @@ strong {
 .body p {
   margin: 10px 0 24px; }
 .body ul {
-  list-style: square;
+  list-style: disc;
   margin: 0 0 1.4em 2em; }
 .body ol {
   list-style: decimal;
@@ -5139,6 +5139,27 @@ div#about {
         display: inline-block; }
       #body #main #articles article header .date {
         margin-left: 10px; }
+    #body #main #articles article footer {
+      border-bottom: solid 3px #f76c6a;
+      padding-bottom: 10px; }
+      #body #main #articles article footer dl {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        color: #888888; }
+        #body #main #articles article footer dl dt, #body #main #articles article footer dl dd {
+          display: inline; }
+    #body #main aside#comments ul li {
+      margin-bottom: 30px; }
+      #body #main aside#comments ul li dl {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        color: #888888; }
+        #body #main aside#comments ul li dl dt, #body #main aside#comments ul li dl dd {
+          display: inline; }
   #body #sub {
     position: relative;
     min-height: 1px;
@@ -5238,6 +5259,7 @@ header#header nav#global ul li {
   #body #main #articles h2 {
     border-left: solid 5px #f85a55; }
   #body #main #articles article header .date {
+    color: #888888;
     font-size: 12px; }
 
 #footer {

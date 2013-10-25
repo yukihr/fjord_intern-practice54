@@ -8,6 +8,7 @@
 /* Variables
 $color-theme: #F85A55
 $color-text: #292929
+$color-text-light: #888888
 $color-bg: #F3F2F2
 $section-round-radius: 30px
 $sections-space-width: 20px
@@ -20,6 +21,18 @@ $sections-space-width: 20px
 
 =rounded-section($radius: $section-round-radius)
   +border-radius($radius)
+
+=author-dl
+  dl
+    font:
+      size: 12px
+    padding: 0
+    margin: 0
+    text-align: right
+    color: $color-text-light
+    dt, dd
+      display: inline
+  
 
 /* Specific
 a
@@ -71,7 +84,7 @@ strong
   p
     margin: 10px 0 24px
   ul
-    list-style: square
+    list-style: disc
     margin: 0 0 1.4em 2em
   ol
     list-style: decimal
@@ -172,6 +185,19 @@ div#about
           .date
             margin:
               left: 10px
+        footer
+          border:
+            bottom: solid 3px #F76C6A
+          padding:
+            bottom: 10px
+          +author-dl
+    aside#comments
+      ul
+        li
+          +author-dl
+          margin:
+            bottom: 30px
+        
   #sub
     +make-md-column(4)
 
@@ -231,6 +257,7 @@ header#header
       article
         header
           .date
+            color: $color-text-light
             font:
               size: 12px
 
