@@ -4970,13 +4970,13 @@ td.visible-print {
 /* Mixins */
 /* Specific */
 a:link {
-  color: #0f99dd; }
+  color: #6779d1; }
 a:visited {
-  color: #5588b2; }
+  color: #5361a8; }
 a:hover {
-  color: #0c7aad; }
+  color: #f85a55; }
 a:active {
-  color: #2812a5; }
+  color: #f85a55; }
 
 h2 {
   font-size: 30px;
