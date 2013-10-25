@@ -5034,7 +5034,8 @@ strong {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  padding: 0 4%; }
+  padding: 0 4%;
+  max-width: 1280px; }
   #wrap:before, #wrap:after {
     content: " ";
     /* 1 */
@@ -5171,6 +5172,14 @@ div#about {
       #body #sub {
         float: left;
         width: 33.33333%; } }
+    #body #sub .ad {
+      padding: 20px 0;
+      text-align: center;
+      color: white; }
+      #body #sub .ad p {
+        width: 250px;
+        height: 250px;
+        background-color: blue; }
 
 #footer {
   margin-top: 20px;
