@@ -7,7 +7,7 @@ module.exports = (grunt) ->
         options:
           compass: true
         files:
-          'style.css': 'style.sass'
+          'stylesheets/style.css': 'sass/style.sass'
     # for livereload
     # Install Browser Extension:
     #   http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
@@ -17,11 +17,10 @@ module.exports = (grunt) ->
           port: 9000
     watch:
       css:
-        files: ['*.sass']
+        files: ['sass/*.sass']
         tasks: ['sass']
         options:
           livereload: true
-          spawn: false
 
   for name, version of pkg.devDependencies
     if name.substring(0, 6) is 'grunt-'

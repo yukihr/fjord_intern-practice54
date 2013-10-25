@@ -1,0 +1,166 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+ * Code licensed under the BSD License:
+ * http://developer.yahoo.com/font-size/license.html
+ * version: 3.3.0
+ * build: 3167 */
+body {
+  font: 13px/1.231 arial, helvetica, clean, sans-serif;
+  *font-size: small;
+  *font: x-small; }
+
+select, input, button, textarea {
+  font: 99% arial, helvetica, clean, sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+pre, code, kbd, samp, tt {
+  font-family: monospace;
+  *font-size: 108%;
+  line-height: 100%; }
+
+/* Mixins */
+/* Variables */
+/* Specific */
+a:link {
+  color: #0f99dd; }
+a:visited {
+  color: #5588b2; }
+a:hover {
+  color: #0c7aad; }
+a:active {
+  color: #2812a5; }
+
+/* Layout */
+header#header h1 {
+  margin: 0 auto;
+  width: 440px;
+  height: 440px;
+  -webkit-border-radius: 220px;
+  -moz-border-radius: 220px;
+  -ms-border-radius: 220px;
+  -o-border-radius: 220px;
+  border-radius: 220px;
+  text-align: center;
+  line-height: 460px;
+  padding: 0px;
+  font-size: 28px;
+  margin-top: -100px; }
+header#header nav#global {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 50%; }
+  header#header nav#global ul {
+    position: absolute;
+    top: 0; }
+    header#header nav#global ul li {
+      width: 100px;
+      height: 100px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      border-radius: 50px;
+      text-align: center;
+      line-height: 100px;
+      position: absolute;
+      top: 0;
+      display: inline-block; }
+    header#header nav#global ul li:first-child {
+      top: 50px;
+      left: -333px; }
+    header#header nav#global ul li:nth-child(2) {
+      top: 160px;
+      left: -320px; }
+    header#header nav#global ul li:nth-child(3) {
+      top: 258px;
+      left: -266px; }
+    header#header nav#global ul li:nth-child(4) {
+      top: 110px;
+      left: 231px; }
+    header#header nav#global ul li:nth-child(5) {
+      top: 216px;
+      left: 196px; }
+
+div#about {
+  margin-top: 50px; }
+  div#about ol {
+    padding: 0 1%;
+    margin: 0 auto; }
+    div#about ol li {
+      display: inline-block;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+      border-radius: 30px;
+      padding: 20px 2%;
+      margin: 0 1%;
+      width: 27%; }
+      div#about ol li h2 {
+        font-size: 20px; }
+
+/* Style */
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
+  background-color: #f85a55;
+  color: #292929; }
+
+header#header h1 {
+  background-color: #f3f2f2; }
+header#header nav#global ul li {
+  background-color: #f3f2f2; }
+
+div#about ol li {
+  background-color: #f3f2f2; }
