@@ -3,6 +3,14 @@
 @import compass/css3/pie
 @import compass/css3
 @import yui_fonts
+@import bootstrap
+
+/* Variables
+$color-theme: #F85A55
+$color-text: #292929
+$color-bg: #F3F2F2
+$section-round-radius: 30px
+$sections-space-width: 20px
 
 /* Mixins
 =circle($radius)
@@ -10,10 +18,8 @@
   height: $radius * 2
   +border-radius($radius)
 
-/* Variables
-$color-theme: #F85A55
-$color-text: #292929
-$color-bg: #F3F2F2
+=rounded-section($radius: $section-round-radius)
+  +border-radius($radius)
 
 /* Specific
 a
@@ -26,18 +32,82 @@ a
   &:active
     color: #2812a5
 
+h2
+  font:
+    size: 30px
+    weight: 300
+  line:
+    height: 50px
+h3
+  font:
+    size: 20px
+    weight: 700
+  line:
+    height: 40px
+h4
+  font:
+    size: 16px
+    weight: 700
+  line:
+    height: 30px
+h5
+  font:
+    size: 14px
+    weight: 700
+  line:
+    height: 24px
+
+h6
+  font:
+    size: 12px
+    weight: 700
+  line:
+    height: 20px
+
+strong
+  font-weight: 700
+
+.body
+  p
+    margin: 10px 0 24px
+  ul
+    list-style: square
+    margin: 0 0 1.4em 2em
+  ol
+    list-style: decimal
+    margin: 0 0 1.4em 2em
+  li
+    line-height: 1.6
+    margin: 0 0 0.6em 0
+  table
+    margin: 0 0 1.4em 0
+    th,
+    td
+      padding: 8px 12px
+      border: #ccc solid 1px
+    th
+      background: #eee
+      text-align: center
+      font:
+        weight: bold
+
+
+
 /* Layout
+#wrap
+  +container-fixed
+  padding: 0 4%
+
 header#header
   h1
     margin: 0 auto
-    +circle(220px)
     text-align: center
     line-height: 460px
     padding: 0px
     font-size: 28px
     //border: solid 12px #FFF
     margin:
-      top: -100px
+      top: -96px
   nav#global
     margin: 0
     padding: 0
@@ -48,7 +118,6 @@ header#header
       position: absolute
       top: 0
       li
-        +circle(50px)
         text-align: center
         line-height: 100px
         position: absolute
@@ -57,7 +126,6 @@ header#header
       li:first-child
         top: 50px
         left: -333px
-          //216px
       li:nth-child(2)
         top: 160px
         left: -320px
@@ -72,20 +140,56 @@ header#header
         left: 196px
 
 div#about
-  margin:
-    top: 50px
+  margin: 0
+  padding: 0
   ol
-    padding: 0 1%
-    margin: 0 auto
+    margin: 40px 0 $sections-space-width
+    +make-row
     li
-      display: inline-block
-      +border-radius(30px)
-      padding: 20px 2%
-      margin: 0 1%
-      width: 27%
+      +make-md-column(4)
       h2
         font-size: 20px
-        
+ 
+#body
+  +make-row
+  #main
+    +make-md-column(8)
+    padding: 30px 2%
+    .breadcrumbs
+      margin: 0 0 20px
+      ol
+        li
+          display: inline
+    #articles
+      h2
+        padding:
+          left: 5px
+      article
+        header
+          margin: 10px 0
+          h3
+            display: inline-block
+          .date
+            margin:
+              left: 10px
+  #sub
+    +make-md-column(4)
+
+#footer
+  margin:
+    top: $sections-space-width
+  padding: 30px 2%
+  +make-row
+  nav
+    +make-md-column(12)
+    ul
+      +make-row
+      li
+        text-align: center
+        +make-md-column(2.4)
+  p
+    text-align: center
+
 /* Style
 body
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif
@@ -95,17 +199,42 @@ body
 
 header#header
   h1
+    +circle(220px)
     background:
       color: $color-bg
   nav#global
     ul
       li
+        +circle(50px)
         background:
           color: $color-bg
         
-div#about
+#about
   ol
-    li
-      background:
-        color: $color-bg
+    +rounded-section
+    background:
+      color: $color-bg
         
+#body
+  +rounded-section
+  background:
+    color: $color-bg
+  #main
+    .breadcrumbs
+      ol
+        li:not([class="current"]):after
+          content: '>'
+    #articles
+      h2
+        border:
+          left: solid 5px $color-theme
+      article
+        header
+          .date
+            font:
+              size: 12px
+
+#footer
+  +border-top-radius($section-round-radius)
+  background:
+    color: #444
