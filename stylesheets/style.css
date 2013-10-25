@@ -5035,7 +5035,9 @@ strong {
   padding-left: 15px;
   padding-right: 15px;
   padding: 0 4%;
-  max-width: 1280px; }
+  max-width: 1280px;
+  min-width: 768px;
+  overflow: hidden; }
   #wrap:before, #wrap:after {
     content: " ";
     /* 1 */
@@ -5044,49 +5046,42 @@ strong {
   #wrap:after {
     clear: both; }
 
-header#header h1 {
-  margin: 0 auto;
-  text-align: center;
-  line-height: 460px;
-  padding: 0px;
-  font-size: 28px;
-  margin-top: -96px; }
-header#header nav#global {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  left: 50%; }
-  header#header nav#global ul {
+header#header {
+  margin-left: -15px;
+  margin-right: -15px; }
+  header#header:before, header#header:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  header#header:after {
+    clear: both; }
+  header#header h1 {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 500px;
+    padding: 0px;
+    font-size: 28px;
+    margin-top: -130px; }
+  header#header nav#global {
+    margin: 0;
+    padding: 0;
+    min-width: 768px;
     position: absolute;
-    top: 0; }
+    top: -45px; }
     header#header nav#global ul li {
       text-align: center;
-      line-height: 100px;
-      position: absolute;
-      top: 0;
-      display: inline-block; }
-    header#header nav#global ul li:first-child {
-      top: 50px;
-      left: -333px; }
-    header#header nav#global ul li:nth-child(2) {
-      top: 160px;
-      left: -320px; }
-    header#header nav#global ul li:nth-child(3) {
-      top: 258px;
-      left: -266px; }
-    header#header nav#global ul li:nth-child(4) {
-      top: 110px;
-      left: 231px; }
-    header#header nav#global ul li:nth-child(5) {
-      top: 216px;
-      left: 196px; }
+      line-height: 120px;
+      display: inline-block;
+      margin-left: 10px; }
+      header#header nav#global ul li:first-child {
+        margin-left: 0; }
 
 div#about {
   margin: 0;
   padding: 0; }
   div#about ol {
-    margin: 40px 0 20px;
+    margin: 20px 0;
     margin-left: -15px;
     margin-right: -15px; }
     div#about ol:before, div#about ol:after {
@@ -5237,15 +5232,6 @@ header#header h1 {
   -ms-border-radius: 220px;
   -o-border-radius: 220px;
   border-radius: 220px;
-  background-color: #f3f2f2; }
-header#header nav#global ul li {
-  width: 100px;
-  height: 100px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
   background-color: #f3f2f2; }
 
 #about ol {

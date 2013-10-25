@@ -113,53 +113,40 @@ strong
   padding: 0 4%
   max-width: 1280px
   min-width: 768px
+  overflow: hidden
 
 header#header
+  +make-row
   h1
     margin: 0 auto
     text-align: center
-    line-height: 460px
+    line-height: 500px
     padding: 0px
     font-size: 28px
-    //border: solid 12px #FFF
     margin:
-      top: -96px
+      top: -130px
   nav#global
     margin: 0
     padding: 0
+    min-width: 768px
     position: absolute
-    top: 0
-    left: 50%
+    top: -45px
     ul
-      position: absolute
-      top: 0
       li
         text-align: center
-        line-height: 100px
-        position: absolute
-        top: 0
+        line-height: 120px
         display: inline-block
-      li:first-child
-        top: 50px
-        left: -333px
-      li:nth-child(2)
-        top: 160px
-        left: -320px
-      li:nth-child(3)
-        top: 258px
-        left: -266px
-      li:nth-child(4)
-        top: 110px
-        left: 231px
-      li:nth-child(5)
-        top: 216px
-        left: 196px
+        margin:
+          left: 10px
+        &:first-child
+          margin:
+            left: 0
 
 div#about
   margin: 0
   padding: 0
   ol
-    margin: 40px 0 $sections-space-width
+    margin: $sections-space-width 0
     +make-row
     li
       +make-md-column(4)
@@ -241,12 +228,6 @@ header#header
     +circle(220px)
     background:
       color: $color-bg
-  nav#global
-    ul
-      li
-        +circle(50px)
-        background:
-          color: $color-bg
         
 #about
   ol
